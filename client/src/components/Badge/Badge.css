@@ -1,0 +1,18 @@
+.badge {
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .badge-verified {
+    background-color: green;
+  }
+  
+  .badge-pending {
+    background-color: orange;
+  }
+  
+  .badge-not-verified {
+    background-color: red;
+  }
