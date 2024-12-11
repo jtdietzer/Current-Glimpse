@@ -1,25 +1,52 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Glimpse",
+  "name": "Current Glimpse - Verified News for Everyone",
+  "description": "Your trusted source for verified news using blockchain technology.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "theme_color": "#25b09b",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "shortcuts": [
+    {
+      "name": "Top Stories",
+      "short_name": "Top Stories",
+      "description": "Go to the top stories section.",
+      "url": "/top-stories",
+      "icons": [
+        {
+          "src": "/icons/shortcut-top-stories.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Most Popular",
+      "short_name": "Most Popular",
+      "description": "View the most popular articles.",
+      "url": "/most-popular",
+      "icons": [
+        {
+          "src": "/icons/shortcut-most-popular.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
 }

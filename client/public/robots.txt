@@ -1,3 +1,20 @@
 # https://www.robotstxt.org/robotstxt.html
+# Robots.txt for Current Glimpse
+
+# Allow all web crawlers to access the public site
 User-agent: *
 Disallow:
+
+# Block sensitive or irrelevant routes
+Disallow: /admin/
+Disallow: /login/
+Disallow: /settings/
+Disallow: /api/
+Disallow: /static/
+Disallow: /service-worker.js
+
+# Allow everything else to be crawled
+Allow: /
+
+# Specify the location of the sitemap for better crawling
+Sitemap: https://currentglimpse.com/sitemap.xml

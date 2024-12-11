@@ -1,0 +1,61 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Testing
+coverage/
+*.lcov
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+*.cache/
+*.babel.json
+*.eslintcache
+
+# Generated files
+package-lock.json
+yarn.lock
+*.map
+
+# Static build output (for React)
+client/build/
+
+# Backend-specific
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/logs/
+
+# Mac system files
+.DS_Store
+
+# Git-specific
+.git/

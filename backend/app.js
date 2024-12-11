@@ -1,33 +1,40 @@
-require('dotenv').config();
+// Import required modules
 const express = require('express');
+const morgan = require('morgan');
 const cors = require('cors');
-const connectDB = require('./config/dbConfig');
+const dotenv = require('dotenv');
+const articleRoutes = require('./routes/articleRoutes');
+const verificationRoutes = require('./routes/verificationRoutes');
 
+// Load environment variables
+dotenv.config();
+
+// Initialize Express app
 const app = express();
-connectDB();
 
-app.use(express.json());
-app.use(cors({
-  origin: 'http://localhost:3000',
-}));
+// Middleware
+app.use(express.json()); // Parse JSON request bodies
+app.use(morgan('dev')); // Logging middleware for development
+app.use(cors()); // Enable Cross-Origin Resource Sharing
 
-// Routes (example placeholders)
-app.use('/api/articles', require('./routes/articleRoutes'));
-app.use('/api/news', require('./routes/newsRoutes'));
+// API Routes
+app.use('/api/articles', articleRoutes); // Routes for articles
+app.use('/api/verify', verificationRoutes); // Routes for verification
 
-// Error handling
-app.use((req, res, next) => {
-  const error = new Error('Not Found');
-  error.status = 404;
-  next(error);
+// Default Route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Current Glimpse Backend API!');
 });
 
-app.use((error, req, res, next) => {
-  res.status(error.status || 500).json({
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({
     error: {
-      message: error.message,
+      message: err.message || 'Internal Server Error',
     },
   });
 });
 
+// Export the app for server.js or testing purposes
 module.exports = app;
