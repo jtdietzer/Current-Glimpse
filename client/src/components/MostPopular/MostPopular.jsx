@@ -47,7 +47,7 @@ const MostPopular = () => {
   return (
     <div className="mostPopular">
       {/* Left Content */}
-      <div className="mostPopular-left-box">
+      {/* <div className="mostPopular-left-box">
         {articlesForLeft.map((article, index) => (
           <div className="mostPopular-left" key={index}>
             <div className="mostPopular-left-category">{article.source}</div>
@@ -63,7 +63,7 @@ const MostPopular = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Right Content */}
       <div className="mostPopular-right-box">

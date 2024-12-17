@@ -1,0 +1,1 @@
+// Centralize color definitions for the project

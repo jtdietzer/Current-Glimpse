@@ -1,0 +1,167 @@
+/* 404 Page Not Found Styles */
+/* #content {
+    height: 90vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    width: 100%;
+  }
+  
+  #content img {
+    height: 500px;
+    background-color: transparent;
+  }
+  
+  .error-text {
+    font-family: "roboto", sans-serif;
+    margin-left: 85px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .error-text h1 {
+    font-size: 200px;
+    font-weight: 300;
+  }
+  
+  .error-text h2 {
+    font-weight: 500;
+    padding: 10px 0;
+  }
+  
+  .error-text p {
+    padding: 10px 0;
+    width: 350px;
+  }
+  
+  .home-button button {
+    border: 3px solid dodgerblue;
+    background-color: transparent;
+    padding: 10px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .home-button button a {
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+  } */
+
+  .notFoundContainer {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .notFoundContainer h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .notFoundContainer p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .notFoundImage {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  
+  .homeLink {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #00ccff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .homeLink:hover {
+    background-color: #05b4df;
+  }
+
+
+  /* Container */
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.notFoundContainer h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .notFoundContainer h1 {
+    font-size: 1.8rem; /* Slightly smaller on mobile */
+  }
+}
+
+/* Paragraph */
+.notFoundContainer p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Image */
+.notFoundImage {
+  max-width: 80%; /* Ensures the image scales for smaller screens */
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Home Link */
+.homeLink {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #00ccff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.homeLink:hover {
+  background-color: #05b4df;
+}
+
+/* Responsive Styles for Smaller Devices */
+@media (max-width: 600px) {
+  .homeLink {
+    padding: 8px 15px; /* Slightly smaller button */
+    font-size: 0.9rem;
+  }
+
+  .notFoundContainer {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+}

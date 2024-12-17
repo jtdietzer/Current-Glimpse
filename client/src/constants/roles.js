@@ -1,0 +1,1 @@
+// Defines user roles (e.g, admin, editor, user)

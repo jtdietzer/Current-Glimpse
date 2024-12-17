@@ -1,0 +1,1 @@
+// Define all app routes as constants

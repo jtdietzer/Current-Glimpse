@@ -1,0 +1,1 @@
+// Restricts access based on user roles

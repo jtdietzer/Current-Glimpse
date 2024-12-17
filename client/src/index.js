@@ -1,53 +1,31 @@
-// React and React-Dom Client imports
-import React, { Suspense } from 'react';
-import { createRoot } from 'react-dom/client';
-
-// Error boundary
-import ErrorBoundary from './components/ErrorBoundary';
+// React and ReactDOM imports
+import React, { Suspense } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // Components
-import Header from './components/Header/Header'; // Import your Header component
+import Loader from "./components/Loader/Loader";
 
-// Styles
-import './styles/loader.css'; // Include the loader styles
+// Lazy-loaded App
+const App = React.lazy(() => import("./App"));
 
-// Lazy load the App component
-const App = React.lazy(() => import('./App'));
-
-// Select the root DOM element
+// Root element
 const rootElement = document.getElementById("root");
-
 if (!rootElement) {
-    throw new Error("Root element not found. Make sure you have a <div id='root'></div> in your HTML.");
+  throw new Error("Root element not found. Ensure <div id='root'></div> is present in your HTML.");
 }
 
 const root = createRoot(rootElement);
 
-// Define the loader fallback
-const Loader = () => (
-    <div>
-        <Header /> {/* Render the Header during loading */}
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: 'calc(100vh - 60px)', // Adjust height to exclude the header
-                marginTop: '60px', // Match the height of your header
-            }}
-        >
-            <div className="loader"></div>
-        </div>
-    </div>
-);
-
-// Render the App with the fallback loader
 root.render(
-    <React.StrictMode>
-        <ErrorBoundary>
-            <Suspense fallback={<Loader />}>
-                <App />
-            </Suspense>
-        </ErrorBoundary>
-    </React.StrictMode>
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Suspense fallback={<Loader />}>
+          <App />
+        </Suspense>
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>
 );

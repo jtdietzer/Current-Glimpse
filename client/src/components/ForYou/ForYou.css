@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.forYouComponent {
+    padding: 15px 30px;
+  
+}
+
+.forYouContent {
+    display: flex;
+    /* border: 1px solid; */
+    align-items: center;
+    border: 1px solid;
+    margin-bottom: 15px;
+}
+
+.forYou-imageComponent {
+    /* border: 1px solid rebeccapurple; */
+    width: 155px;
+    height: 110px;
+    border-radius: 4px;
+}
+
+.forYou-imageContent {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.forYou-infoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 1px solid blue; */
+    padding-left: 15px;
+}
+
+.forYou-category-sourceComponent {
+    display: flex;
+}
+
+.forYou-categoryContent {
+    margin-right: 10px;
+}
+
+.forYou-headlineComponent {
+    /* border: 1px solid red; */
+    margin: 10px 0;
+}
+
+.forYou-headlineContent {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+
+    font-family: Arial, Helvetica, sans-serif;
+}

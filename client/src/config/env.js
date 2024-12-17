@@ -1,0 +1,1 @@
+// Centralize environment variables for the client

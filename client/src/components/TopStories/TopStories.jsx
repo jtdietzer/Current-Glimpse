@@ -10,7 +10,7 @@ const TopStories = () => {
       <div className="topStoriesItem large">
         <img src="/assets/images/stock.jpg" alt="Fashion" />
         <div className="topStoriesInfo">
-          <span className="category">Fashion</span>
+          {/* <span className="category">Fashion</span> */}
           <h3>WordPress News Magazine Charts the Most Chic and Fashionable Women of New York City</h3>
           <p>Jacob Dietzer • August 7, 2019</p>
         </div>

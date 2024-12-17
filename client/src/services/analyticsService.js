@@ -1,0 +1,1 @@
+// Functions for sending user interaction data to analytics tools

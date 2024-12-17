@@ -1,0 +1,1 @@
+// Ensures certain pages are accessible only for authenicated users

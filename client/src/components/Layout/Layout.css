@@ -1,0 +1,300 @@
+/* Header & Footer Styles */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.layoutContent {
+    flex: 1;
+}
+
+
+.headerComponent {
+    /* border: 1px solid rebeccapurple; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+  }
+  
+  .logoComponent {
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logoContent {
+    height: 35px;
+    width: 220px;
+    justify-content: center;
+  }
+  
+  /* Extra Small (Phones) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .headerComponent {
+      /* background-color: rebeccapurple; */
+      display: flex;
+      width: 100vw;
+    }
+    .searchComponent {
+      /* display: none; */
+      flex: 0 0 auto;
+      background-color: none;
+    }
+    .searchIcon {
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+    .logoComponent {
+      flex:1;
+    }
+
+    .profileComponent {
+      flex: 0 0 auto;
+    }
+
+    #content {
+      height: 80% !important;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      width: 100% !important;
+      position: relative;
+      margin-top: 30px;
+
+    }
+
+    .error-text {
+      position: absolute;
+      top: 100%;
+      right: -30%;
+      align-items: center;
+    
+    }
+
+    .error-text h1 {
+      font-size: 8rem !important;
+    }
+    #content img {
+    height: 40vh !important;
+    }
+
+/* Header Section */
+.headerComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Search Component */
+.searchIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Logo Component */
+.logoComponent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+.logoContent {
+  max-height: 30px;
+  display: block;
+  width: auto;
+}
+
+/* Profile Component */
+.profileComponent {
+  position: relative;
+}
+
+.profileIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profileIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+/* Sliding Search Page */
+.searchPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.searchPage.slideIn {
+  transform: translateX(0);
+}
+
+.searchPage.slideOut {
+  transform: translateX(-100%);
+}
+
+.searchPageContent {
+  padding: 20px;
+}
+
+.searchPageContent h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.searchPageInput {
+  font-size: 16px; /* Minimum font size to prevent zooming */
+  line-height: 1.5;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.closeSearch {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Profile Dropdown Menu */
+.profileComponent {
+  position: relative;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 150px;
+  z-index: 1000;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.profileDropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profileDropdown li:hover {
+  background-color: #f5f5f5;
+}
+
+.profileDropdown a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 100%;
+}
+
+/* Profile Notification Badge */
+.notificationBadge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+}
+    
+  }
+  
+  /* Small (Tablets in Portrait Mode) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .headerComponent {
+      background-color: orange;
+      background-color: lightgray;
+      width: 100%;
+    }
+    /* header {
+      border: 2px solid rebeccapurple;
+    } */
+    .logoContent {
+      height: 30px;
+      height: 100%;
+      height: 60px;
+      height: 3rem;
+    }
+  }
+  
+  /* Medium (Tablets in Landscape Mode) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .headerComponent {
+      background-color: red;
+    }
+  }
+  
+  /* Large (Desktop) */
+  /* @media (min-width: 1025px) {
+    .headerComponent {
+      background-color: gray;
+    } */
+  

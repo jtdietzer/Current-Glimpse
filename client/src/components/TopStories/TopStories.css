@@ -116,3 +116,37 @@ img {
   opacity: 0.8; /* Subtle text for author/date */
   margin: 0;
 }
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .topStoriesComponent {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: min-content;
+    height: 40vh;
+    width: 100% !important;
+    border-radius: none !important;
+    border: 1px solid red;
+  }
+
+  .topStoriesComponent img {
+    height: 30rem !important;
+    width: 100vw !important;
+    border-radius: none !important;
+    filter: brightness(100%);
+    filter: brightness(85%);
+  }
+
+  .topStoriesInfo {
+    /* border: 1px solid #fff; */
+    width: 100% !important;
+    padding: 30px;
+    bottom: 0px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border: none !important;
+  }
+.medium, .small {
+  display: none;
+}
+}

@@ -1,0 +1,1 @@
+// Encapulates error-handling logic

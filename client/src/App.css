@@ -9,4 +9,5 @@
   height: min-content;
   /* background-color: rgba(213, 213, 213, 1); */
   background-color: #ffffff;
+  overflow: hidden;
 }
